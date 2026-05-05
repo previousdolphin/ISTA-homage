@@ -1,0 +1,91 @@
+/* RESET & BASE SETUP */
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #020202; /* Pure Black Void */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    touch-action: none; /* Prevents mobile browser zooming/scrolling */
+}
+
+/* FULLSCREEN CANVAS */
+#canvas-container {
+    width: 100vw;
+    height: 100vh;
+    display: block;
+}
+
+/* UI OVERLAY */
+#ui-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    z-index: 10;
+}
+
+/* START MENU CARD */
+#start-menu {
+    background: rgba(10, 10, 12, 0.85);
+    padding: 40px 60px;
+    border-radius: 12px;
+    text-align: center;
+    color: white;
+    pointer-events: auto;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.2s ease, background 0.2s ease;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+#start-menu:hover {
+    background: rgba(20, 20, 24, 0.95);
+    transform: scale(1.02);
+}
+
+#start-menu h1 {
+    margin: 0 0 5px 0;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    font-size: 28px;
+}
+
+#start-menu p {
+    margin: 0;
+    color: #aaa;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* CENTER CROSSHAIR */
+#crosshair {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 6px;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    pointer-events: none;
+}
+
+/* MOBILE HINT TEXT */
+#mobile-hint {
+    display: none;
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 12px;
+    pointer-events: none;
+    letter-spacing: 2px;
+}

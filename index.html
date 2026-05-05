@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
+    <title>Homage to ISTA | Digital Playroom</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+    <!-- 3D CANVAS CONTAINER -->
+    <div id="canvas-container"></div>
+    
+    <!-- USER INTERFACE OVERLAY -->
+    <div id="ui-layer">
+        <div id="start-menu">
+            <h1>Homage to ISTA</h1>
+            <p style="color: rgba(255, 255, 255, 0.8); font-size: 16px; margin-bottom: 25px; font-weight: 500;">(In Sound to All)</p>
+            <p id="desktop-inst">Click to start<br>WASD to move • Mouse to look<br>Left Click to interact</p>
+            <p id="mobile-inst" style="display: none;">Tap to start<br>Drag left side to move • Right side to look<br>Tap objects to interact</p>
+        </div>
+    </div>
+    
+    <!-- CROSSHAIR & MOBILE HINTS -->
+    <div id="crosshair"></div>
+    <div id="mobile-hint">LEFT: MOVE &nbsp;&nbsp;|&nbsp;&nbsp; RIGHT: LOOK</div>
+
+    <!-- EXTERNAL LIBRARIES -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="assets/js/scripts.js"></script>
+</body>
+</html>
